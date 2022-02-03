@@ -23,11 +23,12 @@ public class MarkdownParse {
                         toReturn.add(markdown.substring(openParen + 1, closeParen)); 
                         linkIndex++;
                     }
+                    if(nextCloseBracket + 1 != openParen){
+                        toReturn.remove(linkIndex);
+                        linkIndex--;
+                    }
                 }
-                else if(openParen != 1){
-                    toReturn.remove(linkIndex);
-                    linkIndex--;
-                }
+                 
             }
             
             if(closeParen == -1){
