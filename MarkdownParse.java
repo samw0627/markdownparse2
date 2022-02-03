@@ -24,7 +24,7 @@ public class MarkdownParse {
                         linkIndex++;
                     }
                     if(nextCloseBracket + 1 != openParen){
-                        toReturn.remove(linkIndex);
+                        toReturn.remove(linkIndex-1);
                         linkIndex--;
                     }
                 }
